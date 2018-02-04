@@ -1,4 +1,4 @@
-# Given n, and any number of prime factors, returns the nth highest multiple
+# Given n, and any number of prime factors, returns the nth multiple
 # constructed exclusively from the given prime factors
 
 def nth_exclusive_multiple(n, *factors):
