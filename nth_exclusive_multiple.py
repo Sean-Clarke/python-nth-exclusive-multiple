@@ -1,15 +1,13 @@
-# Given n, and any number of factors, returns the nth highest multiple
-# constructed exclusively from the given factors
+# Given n, and any number of prime factors, returns the nth highest multiple
+# constructed exclusively from the given prime factors
 
 def nth_exclusive_multiple(n, *factors):
     if n == 0:
-        print(1)
         return 1
     lists = []
     for _f in factors:
         f = [_f, _f]
         lists.append(f)
-    list_count = len(lists)
     for i in range (0, n-2):
         for li in lists:
             other_lists = [ol for ol in lists if ol != li]
@@ -36,5 +34,4 @@ def nth_exclusive_multiple(n, *factors):
                 lowest = False
                 break
         if lowest == True:
-            print(li[0])
             return li[0]
